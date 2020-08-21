@@ -1,0 +1,3 @@
+include ':LocationProviderModule'
+include ':app'
+rootProject.name = "LocationProvider"

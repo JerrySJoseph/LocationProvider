@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="GPS_Alert_Message">This app requires access to your device Location Service. Please allow persmissions in order to access this feature. </string>
+</resources>
