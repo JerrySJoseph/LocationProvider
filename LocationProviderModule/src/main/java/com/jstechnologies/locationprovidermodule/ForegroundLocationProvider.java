@@ -27,7 +27,7 @@ import android.provider.Settings;
 
 import androidx.core.app.ActivityCompat;
 
-public class LocationProvider {
+public class ForegroundLocationProvider {
 
 
     public enum ProviderType{
@@ -44,7 +44,7 @@ public class LocationProvider {
     * @param context is required for getting the System Service
     * @param providerType is an enum defined in this class for determining which type of location service is required
      */
-    public LocationProvider(Context context,ProviderType providerType) {
+    public ForegroundLocationProvider(Context context, ProviderType providerType) {
         this._providerType = providerType;
         this.context=context;
         locManager=(LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
@@ -58,6 +58,7 @@ public class LocationProvider {
 
     public void setDistanceinterval(long distanceinterval) {
         this.distanceinterval = distanceinterval;
+
     }
 
     public void SubscribeForLocationUpdates(LocationListener locationListener)
@@ -103,6 +104,7 @@ public class LocationProvider {
     }
     public void dismissProvider()
     {
+
         if(locManager!=null && locationListener!=null)
             locManager.removeUpdates(locationListener);
     }
